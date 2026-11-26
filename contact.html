@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Join the Club — ACPS Cultural Club</title>
+<meta name="description" content="Get in touch with the ACPS Cultural Club to join, take part in an event or ask a question. Email acpsculturalclub@gmail.com.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ACPS Cultural Club">
+<meta property="og:title" content="Contact &amp; Join the Club — ACPS Cultural Club">
+<meta property="og:description" content="Get in touch with the ACPS Cultural Club to join, take part in an event or ask a question. Email acpsculturalclub@gmail.com.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="ACPSCC%20LOGO%202009.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap" aria-label="Main">
+    <a href="index.html" class="mark">
+      <img src="Cultural Club Logo.png" alt="ACPS Cultural Club logo">
+      <span>ACPS<em>Cultural Club</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="organizing-committee.html">Organizing Committee</a></li>
+      <li><a href="advisor.html">Teachers &amp; Advisory Panel</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="contact.html">Join the Club</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+
+
+<main>
+  <section class="page-header">
+    <div class="wrap">
+      <h1>Get in Touch</h1>
+      <p class="lede">Want to join the club, take part in an event, or ask a question? Reach out below.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Contact details</h2>
+        <span class="contact-lede">We usually reply within a couple of school days.</span>
+        <div class="contact-detail">
+          <span>Email</span>
+          <a href="mailto:acpsculturalclub@gmail.com">acpsculturalclub@gmail.com</a>
+        </div>
+                <div class="contact-detail">
+          <span>Faculty Advisor</span>
+          <strong>Sukallyan Mukherji, Nusrat Jahan Nitu</strong>
+        </div>
+        <div class="contact-detail">
+          <span>President</span>
+          <strong>Tamim Tahsin</strong>
+            <p><strong>+880 1947-841877</strong></p>
+        </div>
+        <div class="contact-detail">
+          <span>Vice President</span>
+          <strong>Pratik Biswas</strong>
+          <p><strong>+880 1739-157861</strong></p>
+        </div>
+
+        
+        <div class="social-row">
+          <a href="https://www.instagram.com/acps_cc" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/people/Adamjee-School-Cultural-Club-ASCC/100068916369725/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V6h-3a3 3 0 0 0-3 3v2H8v3h3v6h3v-6h3l1-3h-4V9z"/></svg></a>
+        </div>
+      </div>
+      <form id="contact-form">
+        <div class="row-2">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="grade">Grade</label>
+            <input id="grade" name="grade" type="text" placeholder="e.g. Grade 9">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="reason">I'm reaching out about</label>
+          <select id="reason" name="reason">
+            <option>Joining the Club</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Send message</button>
+        <p class="form-note">This opens your email app with the message ready to send.</p>
+      </form>
+    </div>
+  </section>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var subject = encodeURIComponent('Cultural Club: ' + f.reason.value + ' - ' + f.name.value);
+      var body = encodeURIComponent('Name: ' + f.name.value + '\nGrade: ' + f.grade.value + '\nEmail: ' + f.email.value + '\n\n' + f.message.value);
+      window.location.href = 'mailto:acpsculturalclub@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-main">
+    <div class="foot-mark">
+      <img src="Cultural Club Logo.png" alt="ACPS Cultural Club logo">
+      <span>© 2026 Cultural Club, Adamjee Cantonment Public School</span>
+    </div>
+    <span><a href="mailto:acpsculturalclub@gmail.com">acpsculturalclub@gmail.com</a></span>
+  </div>
+  <div class="credit">
+    <div class="wrap">Website by- Ayush Chakraborty</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
